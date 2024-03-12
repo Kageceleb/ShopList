@@ -11,7 +11,7 @@ export type ProductProps = {
 export function Product({ name, image, selected = false, ...rest}: ProductProps & PressableProps) {
     return (
         <Pressable style={[styles.container, selected && styles.selected]} {...rest}>
-            <Image style={styles.image} source={require("@/assets/apple.png")}/>
+            <Image style={styles.image} source={{uri: image}}/>
             <Text style={styles.title}>{name}</Text>
         </Pressable>
     )
